@@ -1,0 +1,58 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     osrs-weka.filters.unsupervised.attribute.Remove-R2,4-6,8
+Instances:    180
+Attributes:   3
+              DailyAverage
+              Amount_Traded
+              Profit_greater_than_0.75_percent
+Test mode:    split 80.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+DailyAverage <= 37903: TRUE (113.0)
+DailyAverage > 37903
+|   DailyAverage <= 37909
+|   |   Amount_Traded <= 59180: TRUE (2.0)
+|   |   Amount_Traded > 59180: FALSE (5.0/1.0)
+|   DailyAverage > 37909: FALSE (60.0)
+
+Number of Leaves  : 	4
+
+Size of the tree : 	7
+
+
+Time taken to build model: 0 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          34               94.4444 %
+Incorrectly Classified Instances         2                5.5556 %
+Kappa statistic                          0.8754
+Mean absolute error                      0.0602
+Root mean squared error                  0.2316
+Relative absolute error                 13.3926 %
+Root relative squared error             49.7869 %
+Total Number of Instances               36     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.920    0.000    1.000      0.920    0.958      0.882    0.960     0.976     TRUE
+                 1.000    0.080    0.846      1.000    0.917      0.882    0.960     0.846     FALSE
+Weighted Avg.    0.944    0.024    0.953      0.944    0.946      0.882    0.960     0.936     
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 23  2 |  a = TRUE
+  0 11 |  b = FALSE
+

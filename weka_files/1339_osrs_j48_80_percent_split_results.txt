@@ -1,0 +1,53 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     osrs
+Instances:    180
+Attributes:   2
+              DailyAverage
+              Profitable
+Test mode:    split 80.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+DailyAverage <= 172: TRUE (115.0/16.0)
+DailyAverage > 172: FALSE (65.0/6.0)
+
+Number of Leaves  : 	2
+
+Size of the tree : 	3
+
+
+Time taken to build model: 0 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          32               88.8889 %
+Incorrectly Classified Instances         4               11.1111 %
+Kappa statistic                          0.75  
+Mean absolute error                      0.2083
+Root mean squared error                  0.3301
+Relative absolute error                 43.4524 %
+Root relative squared error             68.3413 %
+Total Number of Instances               36     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.917    0.167    0.917      0.917    0.917      0.750    0.875     0.896     TRUE
+                 0.833    0.083    0.833      0.833    0.833      0.750    0.875     0.750     FALSE
+Weighted Avg.    0.889    0.139    0.889      0.889    0.889      0.750    0.875     0.847     
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 22  2 |  a = TRUE
+  2 10 |  b = FALSE
+
